@@ -30,9 +30,6 @@ api_token_query = '''mutation {{
 }}'''
 
 account_query = '''query {{
-  octoplusAccountInfo(accountNumber: "{account_id}") {{
-    isOctoplusEnrolled
-  }}
   account(accountNumber: "{account_id}") {{
     electricityAgreements(active: true) {{
 			meterPoint {{
