@@ -1,0 +1,19 @@
+{
+  "domain": "eon_next",
+  "name": "EON Next",
+  "codeowners": [
+    "@bottlecapdave"
+  ],
+  "config_flow": true,
+  "dependencies": [
+    "repairs",
+    "recorder"
+  ],
+  "documentation": "https://bottlecapdave.github.io/HomeAssistant-OctopusEnergy",
+  "homekit": {},
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/BottlecapDave/HomeAssistant-OctopusEnergy/issues",
+  "ssdp": [],
+  "version": "13.0.0-beta.2",
+  "zeroconf": []
+}

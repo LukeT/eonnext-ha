@@ -1,7 +1,7 @@
 {
-  "name": "octopusenergy",
+  "name": "eonnext",
   "version": "1.0.0",
-  "description": "Home Assistant integration for interacting with Octopus Energy",
+  "description": "Home Assistant integration for interacting with EON Next",
   "main": "index.js",
   "scripts": {
     "build": "tsc ./.build/*.ts --noEmit",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BottlecapDave/HomeAssistant-OctopusEnergy.git"
+    "url": "git+https://github.com/tmfksoft/HomeAssistant-OctopusEnergy.git"
   },
   "author": "",
   "license": "ISC",
