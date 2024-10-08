@@ -55,6 +55,13 @@ async def async_refresh_saving_sessions(
     existing_saving_sessions_result: SavingSessionsCoordinatorResult,
     fire_event: Callable[[str, "dict[str, Any]"], None],
 ) -> SavingSessionsCoordinatorResult:
+  return SavingSessionsCoordinatorResult(
+    # We want to force into our fallback mode
+    current - timedelta(minutes=REFRESH_RATE_IN_MINUTES_OCTOPLUS_SAVING_SESSIONS),
+    2,
+    [],
+    []
+  )
   if existing_saving_sessions_result is None or current >= existing_saving_sessions_result.next_refresh:
     try:
       result = await client.async_get_saving_sessions(account_id)

@@ -34,6 +34,11 @@ async def async_refresh_wheel_of_fortune_spins(
     account_id: str,
     existing_result: WheelOfFortuneSpinsCoordinatorResult
 ) -> WheelOfFortuneSpinsCoordinatorResult:
+  return WheelOfFortuneSpinsCoordinatorResult(
+    current - timedelta(minutes=REFRESH_RATE_IN_MINUTES_OCTOPLUS_WHEEL_OF_FORTUNE),
+    2,
+    None
+  )
   if existing_result is None or current >= existing_result.next_refresh:
     try:
       result = await client.async_get_wheel_of_fortune_spins(account_id)
