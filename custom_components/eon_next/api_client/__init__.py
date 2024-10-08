@@ -604,7 +604,7 @@ class OctopusEnergyApiClient:
             account_response_body["data"]["account"] is not None):
           return {
             "id": account_id,
-            "octoplus_enrolled": false,
+            "octoplus_enrolled": False,
             "electricity_meter_points": list(map(self.map_electricity_meters, 
               account_response_body["data"]["account"]["electricityAgreements"]
               if "electricityAgreements" in account_response_body["data"]["account"] and account_response_body["data"]["account"]["electricityAgreements"] is not None
